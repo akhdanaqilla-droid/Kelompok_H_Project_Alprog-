@@ -14,6 +14,6 @@ hitung_teks <- function(input_teks) {
   cat("Teks tersebut memuat", kalimat, "kalimat dan", kata, "kata.\n")
 }
 
-hitung_teks("Media sosial atau disebut juga dengan jejaring sosial, seperti Facebook, Twitter, Instagram, dan masih banyak lagi ternyata tidak hanya digunakan sebagai tempat berkumpul atau berbagi di dunia maya. Namun, media sosial kini juga bisa dimanfaatkan sebagai media untuk mengembangkan sebuah bisnis. Saat ini telah banyak para pengusaha yang beralih ke media sosial dalam memasarkan produk mereka baik barang ataupun jasa. Beralihnya para pelaku bisnis ke media ini dikarenakan jejaring sosial memiliki manfaat yang sangat banyak bagi usaha bisnis. Berikut ini adalah alasan mengapa jejaring sosial bisa menjadi alat promosi yang paling efektif.")
+hitung_teks("Kecerdasan buatan atau yang lebih dikenal dengan AI (Artificial Intelligence), seperti ChatGPT, Gemini, dan berbagai platform pintar lainnya ternyata tidak hanya digunakan sebagai alat bantu mencari informasi atau hiburan semata. Namun, teknologi AI kini juga bisa dimanfaatkan sebagai media untuk mentransformasi sistem pembelajaran di sekolah. Saat ini telah banyak para pendidik yang beralih ke teknologi AI dalam menyusun materi maupun mengevaluasi perkembangan siswa. Beralihnya para guru ke media ini dikarenakan kecerdasan buatan memiliki manfaat yang sangat banyak bagi efektivitas akademik. Berikut ini adalah alasan mengapa teknologi AI bisa menjadi alat bantu pembelajaran yang paling efisien.")
 hitung_teks("Belajar pemrograman itu menyenangkan.")
 hitung_teks("")
