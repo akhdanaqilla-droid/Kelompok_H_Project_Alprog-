@@ -35,88 +35,16 @@ def klasifikasi_cluster(titik_u):
     else:
         return "C", jarak_c
 
-x1 = float(input("Masukkan x1: "))
-x2 = float(input("Masukkan x2: "))
-x3 = float(input("Masukkan x3: "))
+# List of points to classify
+points_to_classify = [
+    (5, 2, 1),
+    (1, -3, 5),
+    (-1, 4, -1) # Corrected to be a 3D point
+]
 
-U = (x1, x2, x3)
-cluster, jarak = klasifikasi_cluster(U)
+for U_point in points_to_classify:
+    cluster, jarak = klasifikasi_cluster(U_point)
+    print(f"Titik U({U_point[0]}, {U_point[1]}, {U_point[2]}) tergolong Cluster {cluster}")
+    print(f"Jarak ke pusat Cluster {cluster}: {jarak:.3f}")
+    print("\n---\n") # Separator for clarity between outputs
 
-print(f"Titik U({x1}, {x2}, {x3}) tergolong Cluster {cluster}")
-print(f"Jarak ke pusat Cluster {cluster}: {jarak:.3f}")
-
-# 05_cluster_3d.py
-# Klasifikasi titik ke salah satu dari tiga cluster di ruang 3D
-
-import math
-
-PUSAT_A = (2, 1, 3)
-PUSAT_B = (1, -4, 6)
-PUSAT_C = (-2, 3, -2)
-
-def hitung_jarak(titik_u, pusat):
-    return math.sqrt(
-        (titik_u[0] - pusat[0])**2 +
-        (titik_u[1] - pusat[1])**2 +
-        (titik_u[2] - pusat[2])**2
-    )
-
-def klasifikasi_cluster(titik_u):
-    jarak_a = hitung_jarak(titik_u, PUSAT_A)
-    jarak_b = hitung_jarak(titik_u, PUSAT_B)
-    jarak_c = hitung_jarak(titik_u, PUSAT_C)
-
-    if jarak_a <= jarak_b and jarak_a <= jarak_c:
-        return "A", jarak_a
-    elif jarak_b <= jarak_c:
-        return "B", jarak_b
-    else:
-        return "C", jarak_c
-
-x1 = float(input("Masukkan x1: "))
-x2 = float(input("Masukkan x2: "))
-x3 = float(input("Masukkan x3: "))
-
-U = (x1, x2, x3)
-cluster, jarak = klasifikasi_cluster(U)
-
-print(f"Titik U({x1}, {x2}, {x3}) tergolong Cluster {cluster}")
-print(f"Jarak ke pusat Cluster {cluster}: {jarak:.3f}")
-
-# 05_cluster_3d.py
-# Klasifikasi titik ke salah satu dari tiga cluster di ruang 3D
-
-import math
-
-PUSAT_A = (2, 1, 3)
-PUSAT_B = (1, -4, 6)
-PUSAT_C = (-2, 3, -2)
-
-def hitung_jarak(titik_u, pusat):
-    return math.sqrt(
-        (titik_u[0] - pusat[0])**2 +
-        (titik_u[1] - pusat[1])**2 +
-        (titik_u[2] - pusat[2])**2
-    )
-
-def klasifikasi_cluster(titik_u):
-    jarak_a = hitung_jarak(titik_u, PUSAT_A)
-    jarak_b = hitung_jarak(titik_u, PUSAT_B)
-    jarak_c = hitung_jarak(titik_u, PUSAT_C)
-
-    if jarak_a <= jarak_b and jarak_a <= jarak_c:
-        return "A", jarak_a
-    elif jarak_b <= jarak_c:
-        return "B", jarak_b
-    else:
-        return "C", jarak_c
-
-x1 = float(input("Masukkan x1: "))
-x2 = float(input("Masukkan x2: "))
-x3 = float(input("Masukkan x3: "))
-
-U = (x1, x2, x3)
-cluster, jarak = klasifikasi_cluster(U)
-
-print(f"Titik U({x1}, {x2}, {x3}) tergolong Cluster {cluster}")
-print(f"Jarak ke pusat Cluster {cluster}: {jarak:.3f}")
