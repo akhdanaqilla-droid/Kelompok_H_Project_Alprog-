@@ -32,62 +32,6 @@ def baca_nip(nip):
     tanggal = nip[6:8]
     return f"Tanggal lahir ASN: {int(tanggal)} {nama_bulan(bulan)} {tahun}"
 
-nip = input("Masukkan NIP ASN: ")
-print(baca_nip(nip))
-
-# 04_nip_asn.py
-# Menampilkan tanggal lahir ASN dari NIP 18 digit
-
-def nama_bulan(nomor):
-    if   nomor == 1:  return "Januari"
-    elif nomor == 2:  return "Februari"
-    elif nomor == 3:  return "Maret"
-    elif nomor == 4:  return "April"
-    elif nomor == 5:  return "Mei"
-    elif nomor == 6:  return "Juni"
-    elif nomor == 7:  return "Juli"
-    elif nomor == 8:  return "Agustus"
-    elif nomor == 9:  return "September"
-    elif nomor == 10: return "Oktober"
-    elif nomor == 11: return "November"
-    else:             return "Desember"
-
-def baca_nip(nip):
-    if len(nip) != 18 or not nip.isdigit():
-        return "Error: NIP harus berupa 18 digit angka."
-    tahun   = nip[0:4]
-    bulan   = int(nip[4:6])
-    tanggal = nip[6:8]
-    return f"Tanggal lahir ASN: {int(tanggal)} {nama_bulan(bulan)} {tahun}"
-
-nip = input("Masukkan NIP ASN: ")
-print(baca_nip(nip))
-
-# 04_nip_asn.py
-# Menampilkan tanggal lahir ASN dari NIP 18 digit
-
-def nama_bulan(nomor):
-    if   nomor == 1:  return "Januari"
-    elif nomor == 2:  return "Februari"
-    elif nomor == 3:  return "Maret"
-    elif nomor == 4:  return "April"
-    elif nomor == 5:  return "Mei"
-    elif nomor == 6:  return "Juni"
-    elif nomor == 7:  return "Juli"
-    elif nomor == 8:  return "Agustus"
-    elif nomor == 9:  return "September"
-    elif nomor == 10: return "Oktober"
-    elif nomor == 11: return "November"
-    else:             return "Desember"
-
-def baca_nip(nip):
-    if len(nip) != 18 or not nip.isdigit():
-        return "Error: NIP harus berupa 18 digit angka."
-    tahun   = nip[0:4]
-    bulan   = int(nip[4:6])
-    tanggal = nip[6:8]
-    return f"Tanggal lahir ASN: {int(tanggal)} {nama_bulan(bulan)} {tahun}"
-
-nip = input("Masukkan NIP ASN: ")
-print(baca_nip(nip))
-
+print(baca_nip("200701101995251345"))
+print(baca_nip("1993012120190310"))
+print(baca_nip("19930121A019031010"))
