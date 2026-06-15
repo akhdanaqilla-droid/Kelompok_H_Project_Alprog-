@@ -16,37 +16,12 @@ def hitung_teks(teks):
     jumlah_kalimat = teks.count(".")
     return jumlah_kata, jumlah_kalimat
 
-teks = "Kecerdasan buatan atau yang lebih dikenal dengan AI (Artificial Intelligence), seperti ChatGPT, Gemini, dan berbagai platform pintar lainnya ternyata tidak hanya digunakan sebagai alat bantu mencari informasi atau hiburan semata. Namun, teknologi AI kini juga bisa dimanfaatkan sebagai media untuk mentransformasi sistem pembelajaran di sekolah. Saat ini telah banyak para pendidik yang beralih ke teknologi AI dalam menyusun materi maupun mengevaluasi perkembangan siswa. Beralihnya para guru ke media ini dikarenakan kecerdasan buatan memiliki manfaat yang sangat banyak bagi efektivitas akademik. Berikut ini adalah alasan mengapa teknologi AI bisa menjadi alat bantu pembelajaran yang paling efisien."
-jumlah_kata, jumlah_kalimat = hitung_teks(teks)
 
-print(f"Teks tersebut memuat {jumlah_kalimat} kalimat dan {jumlah_kata} kata.")
+jumlah_kata_1, jumlah_kalimat_1 = hitung_teks("Kecerdasan buatan atau yang lebih dikenal dengan AI (Artificial Intelligence), seperti ChatGPT, Gemini, dan berbagai platform pintar lainnya ternyata tidak hanya digunakan sebagai alat bantu mencari informasi atau hiburan semata. Namun, teknologi AI kini juga bisa dimanfaatkan sebagai media untuk mentransformasi sistem pembelajaran di sekolah. Saat ini telah banyak para pendidik yang beralih ke teknologi AI dalam menyusun materi maupun mengevaluasi perkembangan siswa. Beralihnya para guru ke media ini dikarenakan kecerdasan buatan memiliki manfaat yang sangat banyak bagi efektivitas akademik. Berikut ini adalah alasan mengapa teknologi AI bisa menjadi alat bantu pembelajaran yang paling efisien.")
+print(f"Teks tersebut memuat {jumlah_kalimat_1} kalimat dan {jumlah_kata_1} kata.")
 
-# Program menghitung jumlah kata dan kalimat dari sebuah teks
+jumlah_kata_2, jumlah_kalimat_2 = hitung_teks("Belajar pemrograman itu menyenangkan.")
+print(f"Teks tersebut memuat {jumlah_kalimat_2} kalimat dan {jumlah_kata_2} kata.")
 
-def hitung_teks(teks):
-    if not teks.strip():
-        return 0, 0
-    jumlah_kata = len(teks.split())
-    jumlah_kalimat = teks.count(".")
-    return jumlah_kata, jumlah_kalimat
-
-teks = "Belajar pemrograman itu menyenangkan."
-
-jumlah_kata, jumlah_kalimat = hitung_teks(teks)
-
-print(f"Teks tersebut memuat {jumlah_kalimat} kalimat dan {jumlah_kata} kata.")
-
-# Program menghitung jumlah kata dan kalimat dari sebuah teks
-
-def hitung_teks(teks):
-    if not teks.strip():
-        return 0, 0
-    jumlah_kata = len(teks.split())
-    jumlah_kalimat = teks.count(".")
-    return jumlah_kata, jumlah_kalimat
-
-teks = ""
-
-jumlah_kata, jumlah_kalimat = hitung_teks(teks)
-
-print(f"Teks tersebut memuat {jumlah_kalimat} kalimat dan {jumlah_kata} kata.")
+jumlah_kata_3, jumlah_kalimat_3 = hitung_teks("")
+print(f"Teks kosong memuat {jumlah_kalimat_3} kalimat dan {jumlah_kata_3} kata.")
