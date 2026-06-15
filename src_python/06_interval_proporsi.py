@@ -31,9 +31,16 @@ def hitung_interval(p_hat, n, alpha):
     atas   = p_hat + margin
     return (bawah, atas, alpha, z)
 
-p_hat = float(input("Masukkan proporsi sampel (p̂): "))
-n     = int(input("Masukkan ukuran sampel (n): "))
-alpha = int(input("Masukkan alpha (5 atau 10): "))
+
+# Contoh panggilan fungsi dan pencetakan hasilnya
+print(f"Test 1: {hitung_interval(0.6, 100, 5)}")
+print(f"Test 2: {hitung_interval(1.5, 100, 5)}") # Ini akan menghasilkan error karena p_hat > 1
+print(f"Test 3: {hitung_interval(0.5, 100, 10)}") # Fixed: added closing parenthesis and used alpha=10 as valid example
+
+# Contoh nilai untuk perhitungan interval konfidensi utama:
+p_hat = 0.6  # Contoh proporsi sampel (p̂)
+n     = 100  # Contoh ukuran sampel (n)
+alpha = 5    # Contoh alpha (5 untuk 95% konfidensi, 10 untuk 90%)
 
 hasil = hitung_interval(p_hat, n, alpha)
 
@@ -41,79 +48,9 @@ if isinstance(hasil, str):
     print(hasil)
 else:
     bawah, atas, a, z = hasil
-    print(f"\nInterval konfidensi {100-a}% (z = {z}):")
-    print(f"  {bawah:.4f} < p < {atas:.4f}")
-
-# 06_interval_proporsi.py
-# Menghitung interval konfidensi untuk proporsi populasi
-
-import math
-
-def tentukan_z(alpha):
-    if alpha == 5:
-        return 1.96
-    elif alpha == 10:
-        return 1.645
-    else:
-        return None
-
-def hitung_interval(p_hat, n, alpha):
-    if p_hat < 0 or p_hat > 1:
-        return "Error: proporsi harus bernilai antara 0 dan 1."
-    z = tentukan_z(alpha)
-    if z is None:
-        return "Error: alpha hanya boleh 5 atau 10."
-    margin = z * math.sqrt(p_hat * (1 - p_hat) / n)
-    bawah  = p_hat - margin
-    atas   = p_hat + margin
-    return (bawah, atas, alpha, z)
-
-p_hat = float(input("Masukkan proporsi sampel (p̂): "))
-n     = int(input("Masukkan ukuran sampel (n): "))
-alpha = int(input("Masukkan alpha (5 atau 10): "))
-
-hasil = hitung_interval(p_hat, n, alpha)
-
-if isinstance(hasil, str):
-    print(hasil)
-else:
-    bawah, atas, a, z = hasil
-    print(f"\nInterval konfidensi {100-a}% (z = {z}):")
-    print(f"  {bawah:.4f} < p < {atas:.4f}")
-
-# 06_interval_proporsi.py
-# Menghitung interval konfidensi untuk proporsi populasi
-
-import math
-
-def tentukan_z(alpha):
-    if alpha == 5:
-        return 1.96
-    elif alpha == 10:
-        return 1.645
-    else:
-        return None
-
-def hitung_interval(p_hat, n, alpha):
-    if p_hat < 0 or p_hat > 1:
-        return "Error: proporsi harus bernilai antara 0 dan 1."
-    z = tentukan_z(alpha)
-    if z is None:
-        return "Error: alpha hanya boleh 5 atau 10."
-    margin = z * math.sqrt(p_hat * (1 - p_hat) / n)
-    bawah  = p_hat - margin
-    atas   = p_hat + margin
-    return (bawah, atas, alpha, z)
-
-p_hat = float(input("Masukkan proporsi sampel (p̂): "))
-n     = int(input("Masukkan ukuran sampel (n): "))
-alpha = int(input("Masukkan alpha (5 atau 10): "))
-
-hasil = hitung_interval(p_hat, n, alpha)
-
-if isinstance(hasil, str):
-    print(hasil)
-else:
-    bawah, atas, a, z = hasil
-    print(f"\nInterval konfidensi {100-a}% (z = {z}):")
-    print(f"  {bawah:.4f} < p < {atas:.4f}")
+    print(f"\nHasil perhitungan interval konfidensi utama:")
+    print(f"  Batas bawah (p̂ - margin): {bawah:.4f}")
+    print(f"  Batas atas (p̂ + margin): {atas:.4f}")
+    print(f"  Tingkat konfidensi: {100-a}%")
+    print(f"  Z-score yang digunakan: {z}")
+    print(f"\nInterval konfidensi {100-a}% adalah: ({bawah:.4f}, {atas:.4f})")
